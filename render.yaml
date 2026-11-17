@@ -1,0 +1,49 @@
+# Render Blueprint for the backend only. The frontend is deployed separately
+# (Vercel/Netlify/Render Static Site) with VITE_API_URL pointing at this service.
+services:
+  - type: web
+    name: marketplace-api
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: STORAGE
+        value: s3
+      # Secrets: Render asks for these when the blueprint is created.
+      - key: MONGO_URI
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: ELASTICSEARCH_URL
+        sync: false
+      - key: ELASTICSEARCH_API_KEY
+        sync: false
+      - key: JWT_ACCESS_SECRET
+        sync: false
+      - key: JWT_REFRESH_SECRET
+        sync: false
+      - key: CLIENT_ORIGIN
+        sync: false
+      - key: PUBLIC_URL
+        sync: false
+      - key: AWS_REGION
+        sync: false
+      - key: AWS_S3_BUCKET
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      - key: RAZORPAY_WEBHOOK_SECRET
+        sync: false
+      - key: COMMISSION_PERCENT
+        value: 10
