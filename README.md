@@ -1,5 +1,7 @@
 # Multi-Vendor Marketplace
 
+**Demo video:** [Watch the demo walkthrough](https://drive.google.com/file/d/1ilwpujnCaw2IZprTtSm_UIyLQDCc423D/view?usp=sharing)
+
 A marketplace with three roles (customer, vendor, admin). Several shops sell on one site, a customer checks out once, and each shop gets its own order, its own payout and its own invoice.
 
 **Stack:** React (Vite), Node.js + Express, MongoDB, Redis, Elasticsearch, AWS S3 (optional), Razorpay test mode.
