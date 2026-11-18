@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const redis = require('../config/redis');
 const Product = require('../models/Product');
-const HttpError = require('./httperror');
+const HttpError = require('./httpError');
 
 const TTL_SECONDS = 7 * 24 * 60 * 60; // an untouched cart expires after a week
 const MAX_QTY = 20;

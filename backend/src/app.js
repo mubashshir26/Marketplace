@@ -14,7 +14,7 @@ const orderRoutes = require('./routes/orders');
 const reviewRoutes = require('./routes/reviews');
 const couponRoutes = require('./routes/coupons');
 const { webhook } = require('./routes/payments');
-const HttpError = require('./services/httperror');
+const HttpError = require('./services/httpError');
 const { UPLOAD_DIR } = require('./services/storage');
 
 const app = express();
