@@ -114,4 +114,21 @@ For a test payment use Razorpay's test mode keys and the test card or UPI detail
 
 ## Team ownership and reflections
 
-Add one section per intern (what they owned, what they learned) before the final presentation.
+## Reflection: Mohd Mubashshir
+
+**What I owned**
+- Setting up and running the full stack with Docker (MongoDB, Redis, Elasticsearch)
+- Connecting the app to Razorpay test mode and debugging the payment setup
+- Adapting the code to the project requirements, then running and testing the whole flow end to end
+- Fixing problems I found along the way, such as payment keys that failed to authenticate, an API error handler returning the wrong status code, and file names that work on Windows but would break on Linux
+- The GitHub repository, documentation and the demo video
+
+**What I learned**
+- How authentication, role-based access, search, a Redis cart, payment verification and order lifecycles fit together in one product
+- Why the server must verify a payment signature instead of trusting the browser
+- That bugs hide in details such as stock handling, double clicks and file-name casing, and that automated tests (49 of them) catch many of them early
+
+**What I would do next**
+- Deploy the frontend and backend separately using the included configuration
+- Set up Razorpay Route linked accounts so vendor payouts are sent automatically
+- Add rate limiting and measure the search and API performance on real data
